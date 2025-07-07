@@ -1,0 +1,16 @@
+class Solution {
+public:
+    bool isPalindrome(string s) 
+    {
+        string rstr;
+        for(const auto& c: s)
+        {
+            if(isalnum(c))
+                rstr.push_back(tolower(c));
+        }
+        if(rstr.empty()) return true;
+        auto temp_rstr = rstr;
+        reverse(rstr.begin(), rstr.end());
+        return rstr == temp_rstr;
+    }
+};
