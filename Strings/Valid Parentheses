@@ -1,0 +1,27 @@
+#include <stack>
+using namespace std;
+
+class Solution {
+public:
+    bool isValid(string s) {
+        stack<char> stk;
+        for (const char& e : s) {
+            if (stk.empty()) {
+                stk.push(e);
+            }
+            else if (e == ')' && stk.top() == '(') {
+                stk.pop();
+            }
+            else if (e == ']' && stk.top() == '[') {
+                stk.pop();
+            }
+            else if (e == '}' && stk.top() == '{') {
+                stk.pop();
+            }
+            else {
+                stk.push(e);
+            }
+        }
+        return stk.empty(); 
+    }
+};
