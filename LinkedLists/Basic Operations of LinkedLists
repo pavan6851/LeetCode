@@ -103,9 +103,11 @@ class List
 int main()
 {
     List L;
+    L.display();
     L.pushfront(3);
     L.pushfront(2);
     L.pushfront(1);
+    L.display();
     L.pushback(4);
     L.display();
     L.popfront();
