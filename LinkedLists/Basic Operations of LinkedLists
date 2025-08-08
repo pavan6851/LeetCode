@@ -84,7 +84,7 @@ class List
                 }
                 temp->next = NULL;
                 delete tail;
-                tail =temp;
+                tail = temp;
             }
         }
 
