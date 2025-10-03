@@ -1,0 +1,24 @@
+class Solution {
+public:
+    int maxProfit(vector<int>& prices) 
+    {
+        int left = 0;
+        int right = 1;
+        int result = 0;
+
+        while(left < right && right < prices.size())
+        {
+            if(prices[right] < prices[left])
+            {
+                left = right;
+                right++;
+            }
+            else
+            {
+                result = max(result, prices[right] - prices[left]);
+                right++;
+            }
+        }
+        return result;
+    }
+};
