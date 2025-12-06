@@ -1,0 +1,42 @@
+#include <iostream>
+#include <string>
+#include <cstring>
+#include <unordered_map>
+
+using namespace std;
+
+char nonrepeatchar(string s)
+{
+    unordered_map<char, int> m;
+    char result;
+
+    for(auto c : s)
+    {
+        m[c]++;
+    }
+
+    for(auto c : s)
+    {
+        if(m[c] == 1)
+        {
+            return c;
+        }
+    }
+    return '\0';
+}
+
+int main()
+{
+    string s = "programming";
+    char result = nonrepeatchar(s);
+
+    if(result != '\0')
+    {
+        cout << "first non repeat char is: " << result << endl;
+    }
+    else
+    {
+        cout << "No non repeat char" << endl;
+    }
+    return 0;
+}
