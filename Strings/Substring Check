@@ -1,0 +1,20 @@
+#include <iostream>
+#include <string>
+#include <unordered_set>
+using namespace std;
+
+int main()
+{
+    string s1 = "programming";
+    string s2 = "gram";
+
+    if(s1.find(s2) != string::npos)
+    {
+        cout << "substring found" << endl;
+    }
+    else
+    {
+        cout << "substring not found" << endl;
+    }
+    return 0;
+}
