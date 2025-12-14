@@ -31,14 +31,14 @@ public:
         }
 
         slow = head;
-        ListNode* prev = NULL;
+        //ListNode* prev = NULL;
         while(slow != fast)
         {
             slow = slow->next;
-            prev = fast;
+           // prev = fast;
             fast = fast->next;
         }
-        prev->next = NULL;
+        //prev->next = NULL;
         return slow;
     }
 };
